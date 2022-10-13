@@ -14,6 +14,7 @@
         ".zint/backend/2of5.c",
         ".zint/backend/auspost.c",
         ".zint/backend/aztec.c",
+        ".zint/backend/bc412.c",
         ".zint/backend/code.c",
         ".zint/backend/code1.c",
         ".zint/backend/code16k.c",
