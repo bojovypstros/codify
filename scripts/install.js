@@ -5,6 +5,10 @@ const path = require('path')
 const fs = require('fs')
 const patches = require('./patches')
 const { zintVersion } = require('../package.json')
+const fetch = require('node-fetch')
+const tar = require('tar-fs')
+const stream = require('stream')
+const gunzip = require('gunzip-maybe')
 
 /** Current zint git ref (specified in package.json) */
 const checkout = zintVersion || 'master'
@@ -34,29 +38,29 @@ const createConfigFile = () => {
 /**
  * Clones zint, then applies C source patches.
  */
-const cloneAndPatch = () => {
-  console.log('Removing any existing .zint directory...')
+// const cloneAndPatch = async () => {
+//   console.log('Removing any existing .zint directory...')
+//
+//   rimraf(path.join(__dirname, '../.zint'), async () => {
+//     // console.log(`Cloning zint at '${checkout}' in`, path.join(__dirname, '../.zint'))
+//     fs.mkdir(path.join(__dirname, '../.zint'), async () => {
+//
+//       const res = await fetch('https://github.com/zint/zint/archive/refs/tags/2.11.1.tar.gz');
+//       const arrayBuffer = await res.arrayBuffer();
+//       const buffer = new Uint8Array(arrayBuffer);
+//
+//       await stream.Readable.from(buffer)
+//         .pipe(gunzip())
+//         .pipe(tar.extract(path.join(__dirname, '../.zint')));
 
-  rimraf(path.join(__dirname, '../.zint'), () => {
-    console.log(`Cloning zint at '${checkout}' in`, path.join(__dirname, '../.zint'))
+      // patches.forEach(patch => replace.sync(patch))
 
-    clone(`https://github.com/woo-j/zint.git`, './.zint', { checkout }, (err) => {
-      if (err) {
-        console.error(err)
-      } else {
-        console.log('Successfully cloned. Applying code patches...')
+      createConfigFile()
 
-        patches.forEach(patch => replace.sync(patch))
-
-        console.log('Creating zint config header file...')
-
-        createConfigFile()
-
-        console.log('Done.')
-      }
-    })
-  })
-}
-
-cloneAndPatch()
+//     })
+//   })
+// }
+//
+//
+// cloneAndPatch()
 
