@@ -10,7 +10,7 @@
 #include <nan.h>
 #include "../../.zint/backend/zint.h"
 
-namespace symbology {
+namespace codify {
   using v8::FunctionCallbackInfo;
   using v8::Isolate;
   using v8::Local;
@@ -196,5 +196,5 @@ namespace symbology {
           .ToLocalChecked());
   }
 
-  NODE_MODULE(symbology, Init);
+  NODE_MODULE(codify, Init);
 }

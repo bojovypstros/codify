@@ -86,7 +86,7 @@
     }
   },
   "binary": {
-    "module_name": "symbology",
+    "module_name": "codify",
     "module_path": "./bin/binding/bin/",
     "package_name": "{module_name}_{platform}_{arch}_{node_abi}.tar.gz",
     "host": "https://github.com/bojovypstros/codify/releases/download/"

@@ -24,6 +24,10 @@ This Node.js module will allow you to generate over 50+ different types of 1D or
 
 It can create a PNG, SVG, or EPS image file, or return a string containing SVG, PostScript, or base64-encoded PNG data.
 
+Major changes made to this package regards of origin are:
+- fixed version of zint packed up with the package
+- fixed building zint
+
 ## Documentation
 
 [Read the docs →](https://github.com/bojovypstros/codify/blob/master/docs/README.md)

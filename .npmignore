@@ -13,6 +13,7 @@ test/e2e/__rendered__/*
 docs/.vuepress/.cache
 docs/.vuepress/.temp
 /*.tgz
+/.idea
 
 test
 docs

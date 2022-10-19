@@ -1,4 +1,4 @@
-import symbology from '../binding'
+import codify from '../binding'
 import BinResult from '../types/BinResult'
 import OutputType from '../types/enums/OutputType'
 import SymbologyConfig from '../types/SymbologyConfig'
@@ -13,7 +13,7 @@ import SymbologyConfig from '../types/SymbologyConfig'
  * @return {BinResult}
  */
 function createBuffer (config: SymbologyConfig, barcodeData: string): BinResult {
-  return symbology.createStream(
+  return codify.createStream(
     barcodeData,
     config.symbology,
     config.height,
@@ -77,7 +77,7 @@ function invoke (config: SymbologyConfig, barcodeData: string, outputType: Outpu
       .split('<<< EOF >>>')[0]
 
     if (res.code === 0) {
-      res.message = 'Symbology successfully created.'
+      res.message = 'Codify successfully created.'
     }
 
     return Promise.resolve(res)

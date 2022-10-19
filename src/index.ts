@@ -22,8 +22,4 @@ export default {
   SymbologyType,
   createStream,
   createFile,
-  /** Legacy support - remove in next major release */
-  Encoding: EncodingMode,
-  Output: OutputOption,
-  Barcode: SymbologyType
 }

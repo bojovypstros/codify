@@ -20,9 +20,5 @@ declare const _default: {
     SymbologyType: typeof SymbologyType;
     createStream: typeof createStream;
     createFile: typeof createFile;
-    /** Legacy support - remove in next major release */
-    Encoding: typeof EncodingMode;
-    Output: typeof OutputOption;
-    Barcode: typeof SymbologyType;
 };
 export default _default;
