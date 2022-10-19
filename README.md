@@ -1,16 +1,12 @@
 <p align="center">
-  <a href="https://symbology.dev/">
-    <img src="https://symbology.dev/assets/hero.svg" width="159" height="95" />
-  </a>
-
-  <h1 style="text-align: center;" align="center">Symbology</h1>
+  <h1 style="text-align: center;" align="center">Codify</h1>
 </p>
 
 <p align="center">A Node.js module that generates barcode images. Supports 50+ different 1D or 2D symbologies in png, eps, or svg formats.</p>
 
-<p align="center">
-  <a href="https://app.codecov.io/gh/jshor/symbology"><img
-    src="https://img.shields.io/codecov/c/gh/jshor/symbology?style=for-the-badge"
+<!--<p align="center">
+  <a href="https://app.codecov.io/gh/bojovypstros/codify"><img
+    src="https://img.shields.io/codecov/c/gh/bojovypstros/codify?style=for-the-badge"
     alt="Code coverage"
   /></a> <a href="https://github.com/jshor/symbology/actions?query=workflow%3A%22Merge+to+master%22"><img
     src="https://img.shields.io/github/workflow/status/jshor/symbology/Merge%20to%20master?style=for-the-badge"
@@ -19,7 +15,7 @@
     src="http://img.shields.io/npm/v/symbology.svg?style=for-the-badge"
     alt="npm version"
   /></a>
-</p>
+</p>-->
 
 ## Introduction
 
@@ -29,12 +25,12 @@ It can create a PNG, SVG, or EPS image file, or return a string containing SVG, 
 
 ## Documentation
 
-[Read the docs →](https://symbology.dev/docs/)
+[Read the docs →](https://github.com/bojovypstros/codify/blob/master/docs/README.md)
 
 ## Quick start
 
 ```sh
-yarn add symbology
+npm add codify-node
 ```
 
 ## Quick Examples
@@ -78,6 +74,7 @@ import { SymbologyType, createFile } from 'symbology'
     option1: 2,
     primary: '999999999840012',
     fileName: 'maxiCodeExample.svg'
+    showHumanReadableText: false,
   }, 'Secondary Message Here')
 
   console.log('Result: ', data)

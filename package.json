@@ -1,30 +1,26 @@
 {
-  "name": "symbology",
-  "version": "3.0.8",
-  "description": "🔖 Generates 1D, 2D, and composite barcodes in png, svg, or eps formats. Supports 50+ symbologies.",
+  "name": "codify-node",
+  "version": "0.0.1",
+  "description": "Generates 1D, 2D, and composite barcodes in png, svg, or eps formats.",
   "scripts": {
     "commit": "git-cz",
     "release": "standard-version",
-    "lint": "eslint ./src",
     "test:e2e": "rimraf test/e2e/__rendered__/* && jest test/e2e",
     "test:unit": "jest src --collectCoverage true",
     "test": "npm run test:unit && npm run test:e2e",
     "build": "tsc && npm run binary:rebuild",
     "binary:install": "node-pre-gyp install --fallback-to-build",
     "binary:rebuild": "node-pre-gyp rebuild package",
-    "install": "node ./scripts/install.js && npm run binary:install",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "install": "node ./scripts/install.js && npm run binary:install"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "author": "Josh Shor <https://github.com/jshor>",
+  "author": "Matej Kos <https://github.com/bojovypstros>",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jshor/symbology.git"
+    "url": "https://github.com/bojovypstros/codify.git"
   },
-  "homepage": "https://symbology.dev",
   "keywords": [
     "barcode",
     "code 128",
@@ -36,17 +32,11 @@
     "gs1",
     "aztec",
     "data matrix",
-    "usps onecode"
+    "usps onecode",
+    "codify"
   ],
-  "binary": {
-    "module_name": "symbology",
-    "module_path": "./bin/binding/bin/",
-    "remote_path": "{version}",
-    "package_name": "{module_name}_{platform}_{arch}_{node_abi}.tar.gz",
-    "host": "https://github.com/jshor/symbology/releases/download/"
-  },
   "engines": {
-    "node": ">=14.0.0 <17.0.0"
+    "node": ">=14.0.0"
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.7",
