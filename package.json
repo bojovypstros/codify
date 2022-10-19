@@ -7,6 +7,7 @@
     "test:unit": "jest src --collectCoverage true",
     "test": "npm run test:unit && npm run test:e2e",
     "build": "tsc && npm run binary:rebuild",
+    "bump": "bump",
     "binary:install": "node-pre-gyp install --fallback-to-build",
     "binary:rebuild": "node-pre-gyp rebuild package",
     "install": "node ./scripts/install.js && npm run binary:rebuild",
@@ -66,7 +67,8 @@
     "ts-jest": "^26.5.4",
     "typescript": "^4.2.3",
     "conventional-changelog-conventionalcommits": "5.0.0",
-    "semantic-release": "19.0.5"
+    "semantic-release": "19.0.5",
+    "version-bump-prompt": "6.1.0"
   },
   "peerDependencies": {
     "@mapbox/node-pre-gyp": "^1.0.2"

@@ -13,6 +13,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.3
+        with:
+          version: 6.26.1
+          run_install: true
       - name: Semantic release
         run: npx semantic-release
         env:
