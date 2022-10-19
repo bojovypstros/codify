@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "es5",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "allowJs": true,
-    "declaration": true,
     "strict": true,
+    "module": "commonjs",
+    "target": "es2020"
   },
   "include": [
     "./src/**/*"
