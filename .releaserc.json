@@ -1,0 +1,86 @@
+{
+	"branches": [
+		"master"
+	],
+	"plugins": [
+		[
+			"@semantic-release/commit-analyzer",
+			{
+				"preset": "conventionalcommits",
+				"releaseRules": [
+					{
+						"breaking": true,
+						"release": "minor"
+					},
+					{
+						"type": "refactor",
+						"release": "patch"
+					},
+					{
+						"type": "chore",
+						"release": "patch"
+					},
+					{
+						"type": "revert",
+						"release": "patch"
+					}
+				]
+			}
+		],
+		[
+			"@semantic-release/release-notes-generator",
+			{
+				"preset": "conventionalcommits",
+				"presetConfig": {
+					"types": [
+						{
+							"type": "feat",
+							"section": "✨ Features"
+						},
+						{
+							"type": "fix",
+							"section": "\uD83D\uDC1B Bug Fixes"
+						},
+						{
+							"type": "refactor",
+							"section": "\uD83C\uDFD7️ Refactoring"
+						},
+						{
+							"type": "chore",
+							"section": "♻️ Chores"
+						},
+						{
+							"type": "docs",
+							"section": "\uD83D\uDCDA Documentation"
+						},
+						{
+							"type": "revert",
+							"section": "\uD83D\uDD19 Revert"
+						},
+						{
+							"type": "style",
+							"hidden": true
+						},
+						{
+							"type": "perf",
+							"hidden": true
+						},
+						{
+							"type": "test",
+							"hidden": true
+						}
+					]
+				}
+			}
+		],
+		[
+			"@semantic-release/exec",
+			{
+				"prepareCmd": "pnpm run bump ${nextRelease.version} -- --commit",
+				"publishCmd": "git push origin master --no-verify"
+			}
+		],
+		"@semantic-release/github"
+	],
+	"ci": false
+}
