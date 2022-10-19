@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">A Node.js module that generates barcode images. Supports 50+ different 1D or 2D symbologies in png, eps, or svg formats.</p>
+<p align="center">We have based this package on <a href="https://github.com/jshor/symbology">symbology</a> and are contributing to the code from them.</p>
 
 <!--<p align="center">
   <a href="https://app.codecov.io/gh/bojovypstros/codify"><img
