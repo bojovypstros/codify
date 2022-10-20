@@ -10,7 +10,7 @@
 				"releaseRules": [
 					{
 						"breaking": true,
-						"release": "minor"
+						"release": "major"
 					},
 					{
 						"type": "refactor",
