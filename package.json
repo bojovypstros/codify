@@ -6,15 +6,12 @@
     "test:e2e": "rimraf test/e2e/__rendered__/* && jest test/e2e",
     "test:unit": "jest src --collectCoverage true",
     "test": "npm run test:unit && npm run test:e2e",
-    "build": "tsc -p tsconfig.build.json && npm run binary:rebuild",
+    "build": "tsc -p tsconfig.build.json && npm run binary:install",
     "bump": "bump",
     "binary:install": "node-pre-gyp install --fallback-to-build",
     "binary:rebuild": "node-pre-gyp rebuild package",
     "install": "node ./scripts/install.js && npm run binary:rebuild",
     "semantic-release": "semantic-release"
-  },
-  "exports": {
-    ".": "./dist/index.js"
   },
   "main": "./dist/index.js",
   "author": "Matej Kos <https://github.com/bojovypstros>",
