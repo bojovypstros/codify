@@ -1,6 +1,6 @@
 {
   "name": "codify-node",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Generates 1D, 2D, and composite barcodes in png, svg, or eps formats.",
   "scripts": {
     "test:e2e": "rimraf test/e2e/__rendered__/* && jest test/e2e",
