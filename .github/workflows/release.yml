@@ -18,10 +18,13 @@ jobs:
         with:
           version: 6.26.1
           run_install: true
+          run_build: true
       - name: Semantic release
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build package
+        run: pnpm build --ignore-scripts
       - name: Publish to npm
         uses: JS-DevTools/npm-publish@v1
         with:
