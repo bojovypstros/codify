@@ -17,9 +17,6 @@
     ".": "./dist/index.js"
   },
   "main": "./dist/index.js",
-  "files": [
-    "dist"
-  ],
   "author": "Matej Kos <https://github.com/bojovypstros>",
   "license": "GPL-3.0",
   "repository": {
