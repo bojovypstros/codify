@@ -13,7 +13,7 @@
     "install": "node ./scripts/install.js && npm run binary:rebuild",
     "semantic-release": "semantic-release"
   },
-  "main": "./index.js",
+  "main": "./dist/index.js",
   "author": "Matej Kos <https://github.com/bojovypstros>",
   "license": "GPL-3.0",
   "repository": {
