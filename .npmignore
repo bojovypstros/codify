@@ -8,5 +8,8 @@ test/e2e/__rendered__/*
 /*.tgz
 /.idea
 
+coverage
+build
+
 test
 docs
