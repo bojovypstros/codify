@@ -44,7 +44,7 @@
     "nan": "2.14.2",
     "node-fetch": "2.6.7",
     "pngjs": "6.0.0",
-    "replace-in-file": "6.0.0",
+    "replace-in-file": "6.3.5",
     "rimraf": "3.0.0",
     "tar-fs": "2.1.1"
   },
