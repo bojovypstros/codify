@@ -70,7 +70,7 @@
     "version-bump-prompt": "6.1.0"
   },
   "peerDependencies": {
-    "@mapbox/node-pre-gyp": "1.0.2"
+    "@mapbox/node-pre-gyp": "1.0.11"
   },
   "jest": {
     "setupFilesAfterEnv": [
