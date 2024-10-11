@@ -41,7 +41,7 @@
     "@mapbox/node-pre-gyp": "^1.0.7",
     "git-clone": "0.2.0",
     "gunzip-maybe": "1.4.2",
-    "nan": "2.14.2",
+    "nan": "2.22.0",
     "node-fetch": "2.6.7",
     "pngjs": "6.0.0",
     "replace-in-file": "6.0.0",
